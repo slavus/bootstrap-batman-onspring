@@ -1,0 +1,12 @@
+*.class
+
+# Maven #
+/target
+
+# Custom #
+/db
+
+# Package Files #
+*.jar
+*.war
+*.ear

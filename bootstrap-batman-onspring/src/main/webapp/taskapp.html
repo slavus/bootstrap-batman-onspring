@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Todo List</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<!-- 
+		<link href="/assets/bootstrap/wro/bootstrap.css" rel="stylesheet">
+		<script src="/assets/bootstrap/wro/bootstrap.js"></script>
+		
+		<script src="/assets/wro/batman.js"></script>
+		<script src="/assets/wro/app.js"></script>
+		<link href="/assets/bootstrap/wro/bootstrap.css" rel="stylesheet">
+		 -->
+		<script src="/assets/lib/jquery-1.7.2.min.js"></script>
+
+    <!-- Less file must be before javascript -->
+	  <link rel="stylesheet/less" type="text/css" href="/assets/less/main.less">
+                <script src="/assets/lib/less-1.3.0.min.js"></script>
+		<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+		
+		<script src="/assets/batmanjs/lib/batman.js"></script>
+		<script src="/assets/batmanjs/lib/batman.jquery.js"></script>
+		<script src="/assets/batmanjs/lib/es5-shim.js"></script>
+		
+                <script src="/assets/lib/coffee-script.j1s"></script>
+		<script type="text/coffeescript" src="/assets/coffee/TasksApp.coffee"></script>
+        
+	</head>
+
+<body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a id="aaa" class="btn btn-navbar"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> <a class="brand" href="#">Bootstrap Bataman this Spring 3.1</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li>
+                            <form class="form-search">
+                                <input type="text" class="input-medium search-query">
+                                <button type="submit" class="btn">Search</button>
+                            </form>
+                        </li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+
+		<h1>TODO List </h1>
+
+<div class="row alert alert-error" data-showif="controllers.tasks.errorMsg" style="display:none" >
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <h4 class="alert-heading">Error!</h4>
+    <p data-source="controllers.tasks.errorMsg"></p>
+</div>
+
+<div class="row">
+    <table class="table">
+        <tr><td colspan="3">
+              <form class="form" data-formfor-task="controllers.tasks.newTask"  data-event-submit="controllers.tasks.create">
+                <fieldset>
+                <div class="control-group">
+                    <div class="controls">
+                      <div class="input-append">
+                        <input  id="appendedInputButton" size="16" type="text" placeholder="New Task" data-bind="task.description" autofocus=""></input>
+                        <button class="btn" type="submit"><i class="icon-ok"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                </form>
+        </td></tr>
+        <tr data-foreach-task="Task.all.sortedByDescending['id']">
+            <td > 
+                <input type="checkbox" data-bind="task.done" data-event-change="controllers.tasks.taskDoneChanged">
+                <span data-bind="task.description"></span>
+             </td>
+            <td><a class="close" href="#" data-event-click="controllers.tasks.deleteTask">&times;</a></td>
+        </tr>
+
+    </table>
+
+</div>
+
+</div>
+<!-- /container -->
+
+</body>
+</html>

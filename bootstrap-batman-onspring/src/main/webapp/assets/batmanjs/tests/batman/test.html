@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Batman Test Suite</title>
+
+    <link rel="stylesheet" href="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/lib/qunit.css" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/lib/json2.js"></script>
+    <script type="text/javascript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/lib/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/lib/qunit.js"></script>
+    <script type="text/javascript">QUnit.config.autostart = false</script>
+    <script type="text/javascript" src="../../lib/es5-shim.js"></script>
+    <script type="text/javascript" src="../../lib/coffee-script.js"></script>
+
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/test_helper.coffee"></script>
+    <script type="text/coffeescript" src="../../src/batman.coffee"></script>
+    <script type="text/coffeescript" src="../../src/extras/batman.rails.coffee"></script>
+    <script type="text/coffeescript" src="../../src/extras/batman.i18n.coffee"></script>
+    <script type="text/coffeescript">Batman.exportGlobals()</script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/model_helper.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/storage_adapter/storage_adapter_helper.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/storage_adapter/rest_storage_helper.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/view_helper.coffee"></script>
+
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/accessible_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/app_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/controller_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/data_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/enumerable_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/events/event_emitter_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/events/event_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/extras/rails_extra_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/hash_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/i18n_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/associations/associations_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/associations/association_curator_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/associations/belongs_to_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/associations/has_many_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/associations/has_one_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/associations/polymorphic_association_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/class_querying_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/dirty_keys_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/encoders_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/instance_manipulation_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/model_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/record_lifecycle_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/state_transitions_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model/validations_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/model_paginator_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/navigator/hashbang_navigator_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/navigator/navigator_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/navigator/push_state_navigator_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/object/class_dsl_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/object/integration_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/object/subclass_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/observable/class_and_instance_observable_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/observable/observable_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/paginator_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/params_replacer_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/property/keypath_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/property/property_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/request_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/routes/dispatcher_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/routes/named_route_query_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/routes/route_map_builder_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/routes/route_map_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/routes/route_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/routes/routing_system_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/set/set_index_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/set/set_intersection_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/set/set_sort_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/set/set_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/set/set_union_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/set/unique_set_index_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/storage_adapter/local_storage_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/storage_adapter/session_storage_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/storage_adapter/rails_storage_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/storage_adapter/rest_storage_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/utilities/escape_html_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/utilities/function_name_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/utilities/get_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/utilities/inflector_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/utilities/interpolation_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/utilities/mixin_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/utilities/polymorphic_object_access_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/utilities/set_immediate_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/utilities/state_machine_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/utilities/_batman_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/class_binding_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/event_binding_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/filter_execution_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/filter_rendering_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/formfor_rendering_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/loop_rendering_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/nested_loop_rendering_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/oneway_binding_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/partial_rendering_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/route_rendering_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/select_rendering_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/simple_rendering_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/style_binding_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/unbinding_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/view_binding_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/view_test.coffee"></script>
+    <script type="text/coffeescript" src="../../../../../../../WebContent/src/main/webapp/assets/batman/tests/batman/view/yield_and_contentfor_test.coffee"></script>
+    <script type="text/coffeescript">QUnit.start()</script>
+</head>
+
+<body>
+    <h1 id="qunit-header">Batman Test Suite</h1>
+    <h2 id="qunit-banner"></h2>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+</body>
+</html>
