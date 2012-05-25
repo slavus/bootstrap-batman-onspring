@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups xmlns="http://www.isdc.ro/wro">
+
+	<group name="old">
+		<css>/assets/css/*.css</css>
+		<css>/assets/test.less</css>
+	</group>
+
+	<group name="bootstrap">
+		<css>/assets/bootstrap/less/bootstrap.less</css>
+		<js>/assets/bootstrap/js/*.js</js>
+	</group>
+
+	<group name="batman">
+		<js>/assets/batmanjs/lib/es5-shim.js</js>
+		<js>/assets/batmanjs/lib/batman.js</js>
+		<js>/assets/batmanjs/lib/batman.solo.js</js>
+	</group>
+
+	<group name="test">
+		<js>/assets/coffee/test.coffee</js>
+	</group>
+
+	<group name="app">
+		<js>/assets/coffee/TasksApp.coffee</js>
+	</group>
+
+	<group name="all">
+	  <js minimize="false">/assets/js/lib/jquery-1.7.2.min.js</js>
+	  <group-ref>batman</group-ref>
+	  <group-ref>app</group-ref>
+	</group>
+
+
+</groups>
