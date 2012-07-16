@@ -125,7 +125,6 @@
 				<configuration>
 					<!-- By default maven's build fails to assembly WAR if web.xml is missing -->
 					<failOnMissingWebXml>false</failOnMissingWebXml>
-
 				</configuration>
 			</plugin>
 			<plugin>

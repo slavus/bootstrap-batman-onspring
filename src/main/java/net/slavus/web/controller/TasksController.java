@@ -26,7 +26,7 @@ import static org.springframework.http.HttpStatus.OK;
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
 @Controller
-@RequestMapping(value = "/api/v1/tasks", produces = "application/json")
+@RequestMapping(value = "/v1/tasks", produces = "application/json")
 @Transactional
 public class TasksController {
     private static final Logger LOGGER = LoggerFactory.getLogger(TasksController.class);

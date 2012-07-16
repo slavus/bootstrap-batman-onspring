@@ -20,6 +20,6 @@ public class TaskListWebAppInitializer implements WebApplicationInitializer {
 
         ServletRegistration.Dynamic dispatcherServlet = servletContext.addServlet("dispatcher", new DispatcherServlet(dispatcherContext));
         dispatcherServlet.setLoadOnStartup(1);
-        dispatcherServlet.addMapping("/*");
+        dispatcherServlet.addMapping("/api/*");
     }
 }
